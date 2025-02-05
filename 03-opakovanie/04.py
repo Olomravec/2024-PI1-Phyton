@@ -1,60 +1,39 @@
-import math
-import random
-a = 10
-b = 9
-c = 8
-d = 7
-e = 6
-f = 5
-g = 4
-h = 3
-i = 2
-j = 1
-k = 0
-prašky = round(int(input("Zadaj prachy: ")))
-skit = print("Tvoj vklad je", prašky,"eur.  Prajem veľa šťasťia!")
-def many(prašky):
-        zacatek = int(input("Zadaj číslo od 1 do 5: "))
-        from random import randint
-        x = randint(1,5)
-        if zacatek == x:
-                prašky = prašky * 30  
-                zostatok = print("Vyhral si!",prašky ,"eur. Gratulujem !")
-        elif zacatek > 5:  
-                print("Jak mozes byť tak retardovaný a napísať väčšie císlo ako 5")
-        else: 
-                zostatok = print("Smola Prehral si. Tvoj zostatok je", prašky/2,"eur :(")
-                prašky = prašky / 2
-        print(x,("bolo výherné číslo"))
-        skibidi = input("Ak už nechceš hrať tak stlač Enter. Ale ak chceš pokračovať stlač hocičo a potom enter: ")
-        if skibidi:
-                print(many(prašky))
-        else : 
-                print("Koniec hry")
-                print("Ďakujem za to, že si si zahral moju hru :) Tvoj finálny zostatok je",prašky,"eur." )
-many(prašky)
-sulko = int(input("Ako hodnotíš hru od 0 - 10 ? "))
-if sulko == (a):
-        print("10 Fúha! Ďakujem za hodnotenie ")
-elif sulko == (b):
-        print("9 Fúha! Ďakujem za hodnotenie ")
-elif sulko == (c):
-        print("8 Fúha! Ďakujem za hodnotenie ")
-elif sulko == (d):
-        print("7 Fúha! Ďakujem za hodnotenie ")
-elif sulko == (e):
-        print("6 Dobre ďakujeem")
-elif sulko == (f):
-        print("5 Dobre ďakujem")
-elif sulko == (g):
-        print("4 Dobre ďakujem")
-elif sulko == (h):
-        print("3 No ďakujem: :/")
-elif sulko == (i):
-        print("2 No čo už: :/")
-elif sulko == (j):
-        print("1 No to teda nič moc: :(")
-elif sulko == (k):
-        print("0 To je až tak zlé? :(")
-else:
-        print("Kamoško to čo si napísal")
+import tkinter
+canvas = tkinter.Canvas()
+canvas.pack()
+canvas.create_rectangle(30,10,40,20,fill ="black")
+canvas.create_rectangle(40,10,50,20,fill ="black")
+canvas.create_rectangle(50,10,60,20,fill ="black")
+canvas.create_rectangle(20,30,30,20,fill ="black")
+canvas.create_rectangle(20,40,30,20,fill ="black")
+canvas.create_rectangle(20,40,30,50,fill ="black")
+canvas.create_rectangle(20,50,30,60,fill ="black")
+canvas.create_rectangle(20,60,30,70,fill ="black")
+canvas.create_rectangle(30,70,40,80,fill ="black")
+canvas.create_rectangle(40,70,50,80,fill ="black")
+canvas.create_rectangle(50,70,60,80,fill ="black")
+canvas.create_rectangle(60,60,70,70,fill ="black")
+canvas.create_rectangle(60,50,70,60,fill ="black")
+canvas.create_rectangle(60,40,70,50,fill ="black")
+canvas.create_rectangle(60,30,70,40,fill ="black")
+canvas.create_rectangle(60,20,70,30,fill ="black")
+canvas.create_rectangle(80,10,90,20,fill ="black")
+canvas.create_rectangle(80,20,90,30,fill ="black")
+canvas.create_rectangle(80,30,90,40,fill ="black")
+canvas.create_rectangle(80,40,90,50,fill ="black")
+canvas.create_rectangle(80,50,90,60,fill ="black")
+canvas.create_rectangle(80,60,90,70,fill ="black")
+canvas.create_rectangle(80,70,90,80,fill ="black")
+canvas.create_rectangle(90,20,100,30,fill ="black")
+canvas.create_rectangle(100,30,110,40,fill ="black")
+canvas.create_rectangle(100,40,110,50,fill ="black")
+canvas.create_rectangle(110,20,120,30,fill ="black")
+canvas.create_rectangle(120,10,130,20,fill ="black")
+canvas.create_rectangle(120,20,130,30,fill ="black")
+canvas.create_rectangle(120,30,130,40,fill ="black")
+canvas.create_rectangle(120,40,130,50,fill ="black")
+canvas.create_rectangle(120,50,130,60,fill ="black")
+canvas.create_rectangle(120,60,130,70,fill ="black")
+canvas.create_rectangle(120,70,130,80,fill ="black")
+
+tkinter.mainloop()

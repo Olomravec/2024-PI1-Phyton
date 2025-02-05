@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import tkinter, random
 l = int(input("Zadaj šírku: "))
 p = int(input("Zadaj výšku: "))
@@ -32,3 +33,11 @@ for i in range(s):
     canvas.create_oval(x,y,x+a,y+a,fill = farba,width = 0)
 
 tkinter.mainloop()
+=======
+n = int(input("Zadaj n:"))
+pocet = 0
+for i in range(n):#n znazorni tu hodnotu co sme hore napisali a i pocita od 0 az po n-1 lebo posledne nepocita
+    pocet = pocet + i
+print("Súčet čísel je:",pocet)
+
+>>>>>>> b9679ba2a4c7fa5dafb4753b26491685f50fce0c
