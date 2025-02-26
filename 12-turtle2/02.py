@@ -1,6 +1,6 @@
 import turtle
 t = turtle.Turtle()
-t.speed(0)
+
 
 t.shape("turtle")
 t.shapesize(5,5,8)
