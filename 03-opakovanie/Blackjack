@@ -1,0 +1,344 @@
+import random
+karta = 0
+penazky = int(input ("Zadaj koľko chceš staviť peňazí: "))
+print("Stavil si",penazky,"EUR. Veľa šťastia")
+ciselko = 0
+def blackjack():
+    # prvé kolo
+    random_cislo = random.randint(5,11)
+    print("Tvoja prvá karta je",random_cislo)
+    pokračovanie = int(input("Ak cheš ešte hitnuť tak daj 1 potom enter, ak nie tak 2: "))
+    #druhe kolo
+    if pokračovanie ==1:
+        druhe_random = random.randint(5,10)
+        ciselko = random_cislo + druhe_random
+        print("Tvoje číslo je",ciselko,)
+        if ciselko > 21:
+            print("Tvoja karta je viac ako 21,takže si prehral",penazky/2,"EUR")
+        if ciselko < 22:
+            pokračovanie = int(input("Ak cheš ešte hitnuť tak daj 1 potom enter, ak nie tak 2: "))    
+            if pokračovanie ==1:
+                tretie_random = random.randint(5,10)
+                ciselko = random_cislo + druhe_random + tretie_random 
+                print("Tvoje číslo je",ciselko,)
+                if ciselko > 21:
+                    print("Tvoja karta je viac ako 21,takže si prehral",penazky/2,"EUR")
+                if ciselko < 22:
+                    pokračovanie = int(input("Ak cheš ešte hitnuť tak daj 1 potom enter, ak nie tak 2: ")) 
+                    if pokračovanie==1:
+                        if  karta > 21:
+                            print("Dealer prehral s císlom",karta,". Vyhral si! Tvoja výhra je",penazky,"EUR")
+                        if karta == 17:
+                            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                            if karta > ciselko:
+                                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR") 
+                            if karta == ciselko:
+                                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR")
+                            if karta < ciselko:
+                                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                        if karta == 18:
+                            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                            if karta > ciselko:
+                                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                            if karta == ciselko:
+                                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                            if karta < ciselko:
+                                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                        if karta == 19:
+                            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                            if karta > ciselko:
+                                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                            if karta == ciselko:
+                                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                            if karta < ciselko:
+                                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                        if karta == 20:
+                            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                            if karta > ciselko:
+                                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR") 
+                            if karta == ciselko:
+                                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR")
+                            if karta < ciselko:
+                                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                        if karta == 21:
+                            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                            if karta > ciselko:
+                                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                            if karta == ciselko:
+                                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                            if karta < ciselko:
+                                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                    else:
+                        random_karta = random.randint(5,11)
+                        druha_random = random.randint(3,10)
+                        karta = random_karta + druha_random
+                        if  karta > 21:
+                            print("Dealer prehral s číslom",karta,". Vyhral si! Tvoja výhra je",penazky,"EUR")
+                        if karta == 17:
+                            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                            if karta > ciselko:
+                                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR") 
+                            if karta == ciselko:
+                                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR")
+                            if karta < ciselko:
+                                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                        if karta == 18:
+                            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                            if karta > ciselko:
+                                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                            if karta == ciselko:
+                                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                            if karta < ciselko:
+                                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                        if karta == 19:
+                            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                            if karta > ciselko:
+                                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                            if karta == ciselko:
+                                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                            if karta < ciselko:
+                                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                        if karta == 20:
+                            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                            if karta > ciselko:
+                                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                            if karta == ciselko:
+                                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                            if karta < ciselko:
+                                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                        if karta == 21:
+                            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                            if karta > ciselko:
+                                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                            if karta == ciselko:
+                                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                            if karta < ciselko:
+                                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                        if karta < 17:
+                            tretia_karta = random.randint(3,10)
+                            karta = random_karta + druha_random + tretia_karta
+                            if  karta > 21:
+                                print("Dealer prehral s číslom",karta,". Vyhral si! Tvoja výhra je",penazky,"EUR")
+                            if karta == 17:
+                                print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                                if karta > ciselko:
+                                    print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                                if karta == ciselko:
+                                    print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                                if karta < ciselko:
+                                    print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                            if karta == 18:
+                                print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                                if karta > ciselko:
+                                    print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                                if karta == ciselko:
+                                    print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                                if karta < ciselko:
+                                    print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                            if karta == 19:
+                                print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                                if karta > ciselko:
+                                    print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                                if karta == ciselko:
+                                    print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                                if karta < ciselko:
+                                    print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                            if karta == 20:
+                                print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                                if karta > ciselko:
+                                    print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                                if karta == ciselko:
+                                    print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                                if karta < ciselko:
+                                    print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                            if karta == 21:
+                                print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                                if karta > ciselko:
+                                    print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                                if karta == ciselko:
+                                    print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                                if karta < ciselko:
+                                    print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+            else:
+                random_karta = random.randint(5,11)
+                druha_random = random.randint(3,10)
+                karta = random_karta + druha_random
+                if  karta > 21:
+                    print("Dealer prehral s číslom",karta,". Vyhral si! Tvoja výhra je",penazky*2,"EUR")
+                if karta == 17:
+                    print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                    if karta > ciselko:
+                        print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR") 
+                    if karta == ciselko:
+                        print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR")
+                    if karta < ciselko:
+                        print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                if karta == 18:
+                    print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                    if karta > ciselko:
+                        print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                    if karta == ciselko:
+                        print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                    if karta < ciselko:
+                        print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                if karta == 19:
+                    print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                    if karta > ciselko:
+                        print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                    if karta == ciselko:
+                        print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                    if karta < ciselko:
+                        print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                if karta == 20:
+                    print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                    if karta > ciselko:
+                        print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                    if karta == ciselko:
+                        print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                    if karta < ciselko:
+                        print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                if karta == 21:
+                    print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                    if karta > ciselko:
+                        print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                    if karta == ciselko:
+                        print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                    if karta < ciselko:
+                        print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                if karta < 17:
+                    tretia_karta = random.randint(3,10)
+                    karta = random_karta + druha_random + tretia_karta
+                    if  karta > 21:
+                        print("Dealer prehral s číslom",karta,". Vyhral si! Tvoja výhra je",penazky*2,"EUR")
+                    if karta == 17:
+                        print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                        if karta > ciselko:
+                            print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                        if karta == ciselko:
+                            print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                        if karta < ciselko:
+                            print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                    if karta == 18:
+                        print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                        if karta > ciselko:
+                            print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                        if karta == ciselko:
+                            print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                        if karta < ciselko:
+                            print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                    if karta == 19:
+                        print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                        if karta > ciselko:
+                            print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                        if karta == ciselko:
+                            print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                        if karta < ciselko:
+                            print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                    if karta == 20:
+                        print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                        if karta > ciselko:
+                            print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                        if karta == ciselko:
+                            print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                        if karta < ciselko:
+                            print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                    if karta == 21:
+                        print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                        if karta > ciselko:
+                            print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                        if karta == ciselko:
+                            print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                        if karta < ciselko:
+                            print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+    else:
+        random_karta = random.randint(5,11)
+        druha_random = random.randint(3,10)
+        karta = random_karta + druha_random
+        if  karta > 21:
+            print("Dealer prehral s číslom",karta,". Vyhral si! Tvoja výhra je",penazky*2,"EUR")
+        if karta == 17:
+            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+            if karta > ciselko:
+                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR") 
+            if karta == ciselko:
+                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR")
+            if karta < ciselko:
+                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+        if karta == 18:
+            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+            if karta > ciselko:
+                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+            if karta == ciselko:
+                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+            if karta < ciselko:
+                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+        if karta == 19:
+            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+            if karta > ciselko:
+                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+            if karta == ciselko:
+                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+            if karta < ciselko:
+                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+        if karta == 20:
+            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+            if karta > ciselko:
+                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+            if karta == ciselko:
+                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+            if karta < ciselko:
+                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+        if karta == 21:
+            print("Dealerove karty sú",karta,". Dealer už musí stáť")
+            if karta > ciselko:
+                print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+            if karta == ciselko:
+                print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+            if karta < ciselko:
+                print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+            if karta < 17:
+                tretia_karta = random.randint(3,10)
+                karta = random_karta + druha_random + tretia_karta
+                if  karta > 21:
+                    print("Dealer prehral s číslom",karta,". Vyhral si! Tvoja výhra je",penazky*2,"EUR")
+                if karta == 17:
+                    print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                    if karta > ciselko:
+                        print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                    if karta == ciselko:
+                        print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                    if karta < ciselko:
+                        print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                if karta == 18:
+                    print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                    if karta > ciselko:
+                        print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                    if karta == ciselko:
+                        print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                    if karta < ciselko:
+                        print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                if karta == 19:
+                    print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                    if karta > ciselko:
+                        print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                    if karta == ciselko:
+                        print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                    if karta < ciselko:
+                        print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                if karta == 20:
+                    print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                    if karta > ciselko:
+                        print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                    if karta == ciselko:
+                        print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                    if karta < ciselko:
+                        print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")
+                if karta == 21:
+                    print("Dealerove karty sú",karta,". Dealer už musí stáť")
+                    if karta > ciselko:
+                        print("Prehral si nad dealerom!!! Tvoj zostatok je",penazky/2,"EUR")
+                    if karta == ciselko:
+                        print("Remízoval si s dealerom!Tvoj zostatok je",penazky,"EUR") 
+                    if karta < ciselko:
+                        print("Vyhral si nad dealerom!!! Tvoj zostatok je",penazky *2,"EUR")          
+blackjack()
