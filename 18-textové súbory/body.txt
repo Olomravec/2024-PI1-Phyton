@@ -1,0 +1,12 @@
+o oval
+red
+100 100
+r rectangle
+blue
+200 150 
+r
+green
+150 300 
+o
+red
+16 250

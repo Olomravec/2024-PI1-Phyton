@@ -21,5 +21,7 @@ print(f"priemerná teplota v mesiaci je {priemerna_tep}°C")
 
 print("dni s podpriemernou teplotou:")
 for i in range(pocet_dní):
-    if teplota < priemerna_tep:
-        print("podpriemerná teplota je",teplota) 
+    if teplota[i] < priemerna_tep:
+        print("podpriemerná teplota je",teplota[i]) 
+
+
