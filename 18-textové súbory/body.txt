@@ -1,7 +1,7 @@
-o oval
+o
 red
 100 100
-r rectangle
+r
 blue
 200 150 
 r
